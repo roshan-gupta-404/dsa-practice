@@ -1,0 +1,29 @@
+### **License Plate Validation Rules**
+
+* **Allowed Characters:** The license plate can only contain alphanumeric characters (A-Z, 0-9). Any other characters should be treated as invalid.
+* **Length Constraints:** The license plate must have between 2 and 10 characters, inclusive. If the license plate has fewer than 2 characters or more than 10 characters after processing, it should be considered invalid.
+* **Uppercase Letters:** All letters must be converted to uppercase.
+* **Digit Count:** The license plate must contain at least one digit. If no digit is present, the plate should be considered invalid.
+* **Formatting:** The valid license plate should be formatted into groups of 2 or 3 characters separated by hyphens `-`, as follows:
+
+---
+
+### **Completion of the Formatting Logic**
+
+In this IBM challenge, the formatting usually follows these specific requirements to ensure the groups are balanced:
+
+1. **Remove existing dashes:** First, remove any existing hyphens or spaces from the input string.
+2. **Grouping Strategy:** * If the total number of characters () is divisible by 3, format as 
+* If there is a remainder, the **first group** can be shorter (2 characters) to ensure no single character is left alone at the end.
+* **Goal:** The plate is partitioned from left to right such that every group contains 3 characters, except possibly the first group, which contains the remainder of  divided by 3 (if the remainder is 2), or the logic is adjusted to ensure groups of 2 or 3.
+
+
+
+**Example of "rest of the question" formatting rules:**
+
+> * If , format as `XX-XX` (not `XXX-X`).
+> * If , format as `XX-XXX`.
+> * If , format as `XX`.
+> * If , format as `XX-XXX-XXX`.
+> 
+> 
